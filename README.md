@@ -6,6 +6,8 @@ Developer's workstation powered by Vagrant and Digital Ocean
 - Generate SSH Key. Github has a great [guide](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) for it.
 - Add SSH Key to Digital Ocean.
 - Get the [Vagrant Digital Ocean plugin](https://github.com/devopsgroup-io/vagrant-digitalocean) by running `vagrant plugin install vagrant-digitalocean`.
+- [Get Gas Mask](http://clockwise.ee/) (recommended)
 
 # Setup
 - Run `./setup.sh`
+- Go to your assigned IP address on your browser.
