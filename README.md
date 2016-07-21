@@ -13,11 +13,11 @@ Developer's workstation powered by Vagrant and Digital Ocean
 - Run `$ vagrant up`
 - Go to your assigned IP address on your browser.
 
-# Setting Up Projects 
+## Setting Up Projects 
 After you initialize your vagrant machine you will be able to start working on projects locally. In order to do that
 you will have to configure a virtual host (vhost) and probably import/create a database.
  
-## Creating a Virtual Host
+### Creating a Virtual Host
 Basically, you want your vagrant machine to route the http request (domain) to the right directory. Go into your machine:
 
  `$ vagrant ssh`
@@ -47,7 +47,7 @@ Assuming that you have installed Gasmask, create and activate a new local hosts 
  
  `your_vagrant_ip your_project_url.dev www.your_project_url.dev`
 
-## Creating a database
+### Creating a database
 Your projects will most likely require you to import an existing database or to create one from scratch.
 No problem, I got you covered:
 
@@ -61,7 +61,7 @@ Create a your database: `create database your_db_name;`
 
 Exit: `exit`
 
-## Importing a database
+### Importing a database
 When importing your db make sure you place the sql/dump file in the sql directory of your workstation.
 
 In order to import a db you will have to know if the sql/dump file contains a `CREATE DATABASE` statement.
