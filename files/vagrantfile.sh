@@ -38,7 +38,6 @@ Vagrant.configure("2") do |config|
       provider.region = 'TOR1'
       provider.size = '512mb'
       config.vm.synced_folder "./code", "/vagrant/code", create: true, type: "rsync", rsync__auto: true
-      config.vm.provision "file", source: "./files/workstation.conf", destination: "/etc/apache2/sites-available/"
       config.vm.provision "shell", path: "bootstrap.sh"
     end
 end
