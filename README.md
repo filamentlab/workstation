@@ -41,3 +41,32 @@ Add your vhost at the end of the file:
 ```
 
 Restart apache: `$ service apache2 restart`;
+
+### Modify your hosts file
+Assuming that you have installed Gasmask, create and activate a new local hosts file and add:
+ 
+ `your_vagrant_ip your_project_url.dev www.your_project_url.dev`
+
+## Creating a database
+Your projects will most likely require you to import an existing database or to create one from scratch.
+No problem, I got you covered:
+
+Go into your machine:
+`$ vagrant ssh`
+
+Connect to MySQL:
+`$ mysql -pW04Abm9lLV0Xl47`
+
+Create a your database: `create database your_db_name;` 
+
+Exit: `exit`
+
+## Importing a database
+When importing your db make sure you place the sql/dump file in the sql directory of your workstation.
+
+In order to import a db you will have to know if the sql/dump file contains a `CREATE DATABASE` statement.
+If it doesn't then simply create a db as explained above. Then run:
+
+`$ mysql -pW04Abm9lLV0Xl47 your_db_name < /vagrant/sql/your_sql_dump.sql`
+
+No magic, no trickery, easier than you though, eh?
