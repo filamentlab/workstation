@@ -3,8 +3,9 @@ Developer's workstation powered by Vagrant and Digital Ocean
 
 ## Requirements
 - If you haven't yet, [download Vagrant](https://www.vagrantup.com/).
-- Generate SSH Key. Github has a great [guide](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) for it.
+- If you don't have one already, generate SSH Key. Github has a great [guide](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) for it.
 - Add SSH Key to Digital Ocean.
+- Get the Digital Ocean API Token from your Sys Admin.
 - Get the [Vagrant Digital Ocean plugin](https://github.com/devopsgroup-io/vagrant-digitalocean) by running `$ vagrant plugin install vagrant-digitalocean`.
 - [Get Gas Mask](http://clockwise.ee/) (recommended)
 
@@ -69,4 +70,4 @@ If it doesn't then simply create a db as explained above. Then run:
 
 `$ mysql -pW04Abm9lLV0Xl47 your_db_name < /vagrant/sql/your_sql_dump.sql`
 
-No magic, no trickery, easier than you though, eh?
+No magic, no trickery, easier than you thought, eh?
