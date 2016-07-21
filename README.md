@@ -29,20 +29,15 @@ Now that you're in the guest machine, find the workstation.conf file in the apac
 `$ vim workstation.conf`
 
 Add your vhost at the end of the file:
-> <VirtualHost *:80>
-
->ServerAdmin notifications@filamentlab.com
-
->ServerName your_project_url.dev
-
->ServerAlias www.your_project_url.dev
-
->DocumentRoot /var/www/your_project_dir
-
->ErrorLog ${APACHE_LOG_DIR}/error.log
-
->CustomLog ${APACHE_LOG_DIR}/access.log combined
-
-></VirtualHost>
+```apache
+<VirtualHost *:80>
+    ServerAdmin notifications@filamentlab.com
+    ServerName your_project_url.dev
+    ServerAlias www.your_project_url.dev
+    DocumentRoot /var/www/your_project_dir
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
 
 Restart apache: `$ service apache2 restart`;
